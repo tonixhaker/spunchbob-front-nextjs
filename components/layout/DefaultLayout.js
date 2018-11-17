@@ -1,8 +1,8 @@
 import React, { Component }                 from 'react';
 import {connect}                            from 'react-redux';
 import PropTypes                            from 'prop-types';
-import AppContent                           from './parts/Content';
-import AppFooter                            from './parts/Footer';
+import AppContent                           from './parts/Content/Content';
+import AppFooter                            from './parts/Footer/Footer';
 import AppHeader                            from './parts/Header/Header';
 import { fetchAuthUser }                    from 'store/auth/actions';
 import {setAuthHeader, tokenRestore}        from 'helpers/storage';

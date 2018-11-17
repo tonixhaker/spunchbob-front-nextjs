@@ -3,6 +3,7 @@ import React from 'react';
 import withReduxStore from '../lib/with-redux-store';
 import { Provider } from 'react-redux';
 import '../common/styles/styles.scss';
+import 'antd/dist/antd.css';
 
 class MyApp extends App {
     render () {

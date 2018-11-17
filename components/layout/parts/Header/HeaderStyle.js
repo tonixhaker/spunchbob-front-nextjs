@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import headeLogo from 'img/header-logo.png';
-import '../../../../common/styles/styles.scss';
+
 export const HeaderStyle = styled.div`
   .header{
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);

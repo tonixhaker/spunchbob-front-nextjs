@@ -1,0 +1,55 @@
+@import "../../node_modules/antd/dist/antd.css";
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Mali");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+body{
+  position: absolute;
+  top:0;
+  text-shadow: #8a8282 0px 1px 1px;
+}
+
+.transparent-button{
+  background: transparent!important;
+  box-shadow: none!important;
+  border: none!important;
+}
+:global {
+  .transparent-button{
+    background: transparent!important;
+    box-shadow: none!important;
+    border: none!important;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .flex-space-around{
+    justify-content: space-around;
+  }
+
+  .flex-center{
+    justify-content: center;
+  }
+
+  .flex-column{
+    flex-direction: column;
+  }
+
+  .mobile-header-nav {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0px;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .mobile-header-nav a {
+    padding-top: 10px;
+    color: #36a89d !important;
+  }
+}

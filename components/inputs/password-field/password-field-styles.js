@@ -13,5 +13,6 @@ export const IconStyle = styled.div`
     height: 30px;
     background-color: #d6dfe7;
     margin-right: 10px;
+    display: none;
   }
 `;

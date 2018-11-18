@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Form, Input } from 'antd';
 import { IconStyle } from './password-field-styles';
 
-import './styles.css';
-
 const FormItem = Form.Item;
 
 class PasswordIcon extends React.PureComponent {

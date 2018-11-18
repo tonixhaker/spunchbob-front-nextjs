@@ -15,7 +15,7 @@ const RegisterStyle = styled.div`
   flex-direction: column;
   width: 100%;
   .paralaxcontent{
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 147px);
   }
   .container{
     width: 40%;

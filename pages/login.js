@@ -7,6 +7,8 @@ import PropTypes from 'prop-types';
 import loginBack from 'img/login-back.jpg';
 import DefaultLayout from 'components/layout/DefaultLayout';
 import styled from 'styled-components';
+import Router from 'next/router'
+
 
 
 const LoginStyle = styled.div`
@@ -16,7 +18,7 @@ const LoginStyle = styled.div`
   flex-direction: column;
   width: 100%;
   .paralaxcontent{
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 147px);
   }
   .container{
     width: 40%;
@@ -70,6 +72,7 @@ class Login extends Component {
         login:PropTypes.func,
         google_auth: PropTypes.func,
         telegram_auth: PropTypes.func,
+        isAuthenticated:PropTypes.bool
     };
 
     onSubmit = (data) => {
@@ -83,6 +86,12 @@ class Login extends Component {
     handleTelegramResponse = response => {
         this.props.telegram_auth(response);
     };
+
+    componentWillReceiveProps(props){
+        if(props.isAuthenticated){
+            Router.push('/');
+        }
+    }
 
 
     render() {
@@ -113,7 +122,9 @@ class Login extends Component {
     }
 }
 
-const mapStateToProps = () => ({});
+const mapStateToProps = store => ({
+    isAuthenticated:store.auth.isAuthenticated
+});
 
 const mapDispatchToProps = (dispatch) => ({
     login: (data) => dispatch(login(data)),

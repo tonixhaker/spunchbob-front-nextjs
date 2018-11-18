@@ -48,4 +48,35 @@ body{
     padding-top: 10px;
     color: #36a89d !important;
   }
+  .btn{
+    text-shadow: #8a8282 0px 1px 1px;
+  }
+
+  .order-btn{
+    font-size: 20px!important;
+    height: 50px!important;
+    width: 200px!important;
+    border-radius: 50px!important;
+    background: rebeccapurple!important;
+    border: none!important;
+    color: white!important;
+    text-align: center;
+    padding-top: 10px;
+    &:hover{
+      background: #47206d !important;
+    }
+  }
+
+  .details-button{
+    font-size: 16px !important;
+    height: 40px !important;
+    width: 130px !important;
+    border-radius: 50px !important;
+    background: #36a89d !important;
+    border: none !important;
+    color: white !important;
+    &:hover{
+      background: #47206d !important;
+    }
+  }
 }

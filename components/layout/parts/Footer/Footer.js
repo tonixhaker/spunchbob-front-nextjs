@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {SocialIcon} from 'react-social-icons';
 import {Layout} from 'antd';
-import {FooterStyle} from './footer-style';
+import {FooterStyle} from './FooterStyle';
 
 const { Footer } = Layout;
 

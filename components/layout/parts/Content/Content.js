@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Layout} from 'antd';
-import {SiteContent} from './content-style';
+import {SiteContent} from './ContentStyle';
 
 const { Content } = Layout;
 

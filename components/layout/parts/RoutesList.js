@@ -76,7 +76,7 @@ class RoutesList extends Component {
                     {navigation.map((nav, i)=>{
                         return(
                             <li className={'flex flex-center flex-column'} key={i}>
-                                <Link to={nav.link}>
+                                <Link href={nav.link}>
                                     <a>{nav.title}</a>
                                 </Link>
                             </li>

@@ -64,7 +64,7 @@ const LoginForm = ({
                             Войти
                         </Button>
                         <div className={'flex flex-column flex-center'}>
-                            <Link href={''} style={{color:'white'}}>Забыли пароль?</Link>
+                            <Link href={''} ><a style={{color:'white'}}>Забыли пароль?</a></Link>
                         </div>
                     </div>
                     <div className={'social-auth flex flex-center'}>

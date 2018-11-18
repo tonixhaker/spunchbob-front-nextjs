@@ -1,5 +1,3 @@
-const resourceBase = '/api';
-
 export const AUTH_LOGIN = 'AUTH_LOGIN';
 
 export const login = (data) => ({
@@ -7,7 +5,7 @@ export const login = (data) => ({
     payload: {
         request: {
             method: 'post',
-            url: `${resourceBase}/login`,
+            url: 'login',
             data
         }
     }
@@ -19,7 +17,7 @@ export const register = (data) => ({
     payload: {
         request: {
             method: 'post',
-            url: `${resourceBase}/register`,
+            url: 'register',
             data
         }
     }
@@ -31,7 +29,7 @@ export const fetchAuthUser = () => ({
     payload: {
         request: {
             method: 'post',
-            url: `${resourceBase}/get-auth-user`
+            url: 'get-auth-user'
         }
     }
 });
@@ -42,7 +40,7 @@ export const logout = () => ({
     payload: {
         request: {
             method: 'post',
-            url: `${resourceBase}/logout`
+            url: 'logout'
         }
     }
 });
@@ -53,7 +51,7 @@ export const google_auth = (token) => ({
     payload: {
         request: {
             method: 'post',
-            url: `${resourceBase}/social_login/google`,
+            url: 'social_login/google',
             data:token
         }
     }
@@ -65,7 +63,7 @@ export const telegram_auth = (response) => ({
     payload: {
         request: {
             method: 'post',
-            url: `${resourceBase}/social_login/telegram`,
+            url: 'social_login/telegram',
             data:response
         }
     }
@@ -78,7 +76,7 @@ export const set_password = (data) => ({
     payload: {
         request: {
             method: 'post',
-            url: `${resourceBase}/set-password`,
+            url: 'set-password',
             data
         }
     }

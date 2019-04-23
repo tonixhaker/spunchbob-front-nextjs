@@ -16,8 +16,8 @@ import Link from 'next/link';
 import {RegisterFormStyle} from './RegisterFormStyle';
 
 const registerFormSchema = {
-    first_name: [required, charsOnly],
-    last_name: [required, charsOnly],
+    firstName: [required, charsOnly],
+    lastName: [required, charsOnly],
     email: [required, email, minLength(3)],
     password: [required, minLength(6)],
     c_password: [required, passwordConfirmation('password')]
@@ -35,24 +35,24 @@ const RegisterForm = ({ errors, touched, handleChange, handleBlur, handleSubmit,
                     required
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    name="first_name"
-                    meta={{ touched: touched.first_name, error: errors.first_name }}
+                    name="firstName"
+                    meta={{ touched: touched.firstName, error: errors.firstName }}
                     type="text"
                     placeholder="Ваше имя"
                     label="Имя"
-                    value={values.first_name}
+                    value={values.firstName}
                 />
                 <InputFiled
                     size={'large'}
                     required
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    name="last_name"
-                    meta={{ touched: touched.last_name, error: errors.last_name }}
+                    name="lastName"
+                    meta={{ touched: touched.lastName, error: errors.lastName }}
                     type="text"
                     placeholder="Ваша фамилия"
                     label="Фамилия"
-                    value={values.last_name}
+                    value={values.lastName}
                 />
                 <InputFiled
                     size={'large'}
@@ -114,7 +114,7 @@ RegisterForm.propTypes = {
 
 const RegisterFormWithFormik = withFormik({
     enableReinitialize: true,
-    mapPropsToValues: () => ({ email: '', password: '', first_name: '', last_name: '', c_password: '' }),
+    mapPropsToValues: () => ({ email: '', password: '', firstName: '', lastName: '' }),
     handleSubmit(
         values,
         {

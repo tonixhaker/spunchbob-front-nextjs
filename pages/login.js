@@ -7,9 +7,7 @@ import PropTypes from 'prop-types';
 import loginBack from 'img/login-back.jpg';
 import DefaultLayout from 'components/layout/DefaultLayout';
 import styled from 'styled-components';
-import Router from 'next/router'
-
-
+import Router from 'next/router';
 
 const LoginStyle = styled.div`
 .login-block{
@@ -80,7 +78,8 @@ class Login extends Component {
     };
 
     sendGoogleToken = values => {
-        this.props.google_auth({ token: values.accessToken });
+        console.log(values);
+        this.props.google_auth({ token: values.tokenId });
     };
 
     handleTelegramResponse = response => {

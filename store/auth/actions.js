@@ -17,7 +17,7 @@ export const register = (data) => ({
     payload: {
         request: {
             method: 'post',
-            url: 'register',
+            url: 'auth/register',
             data
         }
     }
@@ -51,7 +51,7 @@ export const google_auth = (token) => ({
     payload: {
         request: {
             method: 'post',
-            url: 'social_login/google',
+            url: 'auth/google',
             data:token
         }
     }

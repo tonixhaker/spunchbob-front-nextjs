@@ -51,9 +51,10 @@ export default (state = initialState, action) => {
         return processReducer(state);
     }
     case success(AUTH_GOOGLE) : {
-        const { token, user } = action.payload.data.data;
+        const { user } = action.payload.data;
+        const { token } = user;
         tokenStore(token);
-        return { ...state, status: STATE_STATUSES.READY, user:user, isAuthenticated: true };
+        return { ...state, status: STATE_STATUSES.READY, user, isAuthenticated: true };
     }
     case error(AUTH_GOOGLE) : {
         return errorReducer(action.payload.response.data);

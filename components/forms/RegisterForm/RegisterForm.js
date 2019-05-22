@@ -116,12 +116,12 @@ const RegisterFormWithFormik = withFormik({
     enableReinitialize: true,
     mapPropsToValues: () => ({ email: '', password: '', firstName: '', lastName: '' }),
     handleSubmit(
-        values,
+        { email, password, firstName, lastName },
         {
             props: { onSubmit }
         }
     ) {
-        onSubmit(values);
+        onSubmit({ email, password, firstName, lastName });
     },
     validate: values => validate(values),
     displayName: 'RegisterForm'

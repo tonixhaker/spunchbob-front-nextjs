@@ -39,9 +39,9 @@ export default (state = initialState, action) => {
         return processReducer(state);
     }
     case success(AUTH_LOGIN) : {
-        const { token, user } = action.payload.data.data;
-        tokenStore(token);
-        return { ...state, status: STATE_STATUSES.READY, user:user, isAuthenticated: true };
+        const { user } = action.payload.data;
+        tokenStore(user.token);
+        return { ...state, status: STATE_STATUSES.READY, user, isAuthenticated: true };
     }
     case error(AUTH_LOGIN) : {
         return errorReducer(action.payload.response.data);
@@ -90,7 +90,7 @@ export default (state = initialState, action) => {
         return processReducer(state);
     }
     case success(AUTH_FETCH_USER) : {
-        const { user } = action.payload.data.data;
+        const { user } = action.payload.data;
         return { ...state, status: STATE_STATUSES.READY, user:user, isAuthenticated: true };
     }
     case error(AUTH_FETCH_USER) : {

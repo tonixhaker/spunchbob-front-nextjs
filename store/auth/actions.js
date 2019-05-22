@@ -5,7 +5,7 @@ export const login = (data) => ({
     payload: {
         request: {
             method: 'post',
-            url: 'login',
+            url: 'auth/login',
             data
         }
     }
@@ -28,8 +28,8 @@ export const fetchAuthUser = () => ({
     type: AUTH_FETCH_USER,
     payload: {
         request: {
-            method: 'post',
-            url: 'get-auth-user'
+            method: 'get',
+            url: 'users/current'
         }
     }
 });

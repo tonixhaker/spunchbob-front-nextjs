@@ -6,7 +6,7 @@ export const tokenRestore = () => {
 
 export const tokenStore = (token) => {
     localStorage.setItem('authToken', token);
-    axios.defaults.headers.common = {'Authorization': `Bearer ${token}`};
+    axios.defaults.headers.common = {'Authorization': `Token ${token}`};
 };
 
 export const tokenRemove = () => {
@@ -14,5 +14,5 @@ export const tokenRemove = () => {
 };
 
 export const setAuthHeader = (token=localStorage.getItem('authToken')) => {
-    axios.defaults.headers.common = {'Authorization': `Bearer ${token}`};
+    axios.defaults.headers.common = {'Authorization': `Token ${token}`};
 };

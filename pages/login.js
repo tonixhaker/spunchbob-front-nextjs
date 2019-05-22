@@ -74,7 +74,7 @@ class Login extends Component {
     };
 
     onSubmit = (data) => {
-        this.props.login(data);
+        this.props.login({user:data});
     };
 
     sendGoogleToken = values => {
